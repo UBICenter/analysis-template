@@ -23,5 +23,3 @@ jobs:
         run: |
           cd jb
           jb build .
-          touch _build/html/.nojekyll
-
