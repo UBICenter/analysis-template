@@ -34,7 +34,7 @@ jobs:
           git add .
           git commit -m "Add new post"
           git push dest master
-          gh pr create --title "Auto-filed PR" --body "Filed automatically, to be removed if successful."
+          gh pr create --title "Auto-filed PR" --body "Filed automatically, to be removed if successful." --base dest:master --head upstream:master
         env:
           GITHUB_TOKEN: ${{secrets.POST_BOT_GH_TOKEN}}
           POST_NAME: 2021-07-07-test-post
