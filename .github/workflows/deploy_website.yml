@@ -27,3 +27,4 @@ jobs:
           git checkout -b test-branch
           cd ..
           python ./ubicenter.org/post_from_notebook.py analysis-template/website/post.ipynb analysis-template/website/metadata.yml --output-md ubicenter.org/_posts/2021-07-01-test-post.md --output-folder ubicenter.org/assets/markdown_assets/test-post/
+          git push origin test-branch
