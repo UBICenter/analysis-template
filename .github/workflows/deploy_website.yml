@@ -21,6 +21,7 @@ jobs:
       - name: Build
         run: |
           git config --global user.name "ubicenter[bot]"
+          git config --global user.email "nikhil.woodruff@ubicenter.org"
           cd ..
           git clone https://github.com/nikhilwoodruff/ubicenter.org
           cd ubicenter.org
@@ -32,7 +33,7 @@ jobs:
           cd ubicenter.org
           git add .
           git commit -m "Add new post"
-          git push dest main
+          git push dest master
           gh pr create --title "Auto-filed PR" --body "Filed automatically, to be removed if successful."
         env:
           GITHUB_TOKEN: ${{secrets.POST_BOT_GH_TOKEN}}
