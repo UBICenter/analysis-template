@@ -35,5 +35,5 @@ jobs:
           gh pr create --title "Auto-filed PR" --body "Filed automatically, to be removed if successful."
         env:
           GITHUB_TOKEN: ${{secrets.POST_BOT_GH_TOKEN}}
-          OUTPUT_MD:
-          OUTPUT_FOLDER:
+          OUTPUT_MD: 2021-07-07-test-post.md
+          OUTPUT_FOLDER: test-post
