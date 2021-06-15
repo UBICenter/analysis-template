@@ -25,11 +25,11 @@ jobs:
           cd ..
           git clone https://github.com/nikhilwoodruff/ubicenter.org
           cd ubicenter.org
-          git remote add origin https://ubicenter-post-bot:$GITHUB_TOKEN@github.com/ubicenter-post-bot/ubicenter.org
+          git remote add dest https://ubicenter-post-bot:$GITHUB_TOKEN@github.com/ubicenter-post-bot/ubicenter.org
           git checkout -b test-branch
           cd ..
           python ./ubicenter.org/post_from_notebook.py analysis-template/website/post.ipynb analysis-template/website/metadata.yml --output-md ubicenter.org/_posts/2021-07-01-test-post.md --output-folder ubicenter.org/assets/markdown_assets/test-post/
           cd ubicenter.org
-          git push origin test-branch
+          git push dest test-branch
         env:
           GITHUB_TOKEN: ${{secrets.POST_BOT_GH_TOKEN}}
