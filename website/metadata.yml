@@ -4,7 +4,7 @@ cover:
 navigation: True
 title: "An interesting post"
 date: 2021-06-15
-tags: [uk]
+tags: []
 subclass: 'post'
 author: nikhil
 excerpt: "Some interesting excerpt."
