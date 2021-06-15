@@ -1,5 +1,5 @@
 name: Submit website PR
-on: [push, pull_request]
+on: [push]
 jobs:
   build:
     if: github.repository == 'nikhilwoodruff/analysis-template'
