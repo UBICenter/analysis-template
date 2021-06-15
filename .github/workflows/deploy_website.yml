@@ -26,12 +26,14 @@ jobs:
           git clone https://github.com/nikhilwoodruff/ubicenter.org
           cd ubicenter.org
           git remote add dest https://ubicenter-post-bot:$GITHUB_TOKEN@github.com/ubicenter-post-bot/ubicenter.org
-          git checkout -b test-branch
           cd ..
-          python ./ubicenter.org/post_from_notebook.py analysis-template/website/post.ipynb analysis-template/website/metadata.yml --output-md ubicenter.org/_posts/2021-07-01-test-post.md --output-folder ubicenter.org/assets/markdown_assets/test-post/
+          python ./ubicenter.org/post_from_notebook.py analysis-template/website/post.ipynb analysis-template/website/metadata.yml --output-md ubicenter.org/_posts/$OUTPUT_MD --output-folder ubicenter.org/assets/markdown_assets/$OUTPUT_FOLDER/
           cd ubicenter.org
           git add .
           git commit -m "Add new post"
           git push dest test-branch
+          gh pr create --title "Auto-filed PR" --body "Filed automatically, to be removed if successful."
         env:
           GITHUB_TOKEN: ${{secrets.POST_BOT_GH_TOKEN}}
+          OUTPUT_MD:
+          OUTPUT_FOLDER:
