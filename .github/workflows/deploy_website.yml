@@ -36,4 +36,4 @@ jobs:
           git push dest ${POST_NAME}
         env:
           GITHUB_TOKEN: ${{secrets.POST_BOT_GH_TOKEN}}
-          POST_NAME:
+          POST_NAME: analysis-template
