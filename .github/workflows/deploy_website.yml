@@ -19,6 +19,7 @@ jobs:
           auto-activate-base: false
 
       - name: Build
+        uses: actions/checkout@v2
         shell: bash -l {0}
         run: |
           cd ..
