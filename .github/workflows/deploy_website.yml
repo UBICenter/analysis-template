@@ -20,6 +20,8 @@ jobs:
 
       - name: Build
         run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           cd ..
           git clone https://github.com/nikhilwoodruff/ubicenter.org
           cd ubicenter.org
