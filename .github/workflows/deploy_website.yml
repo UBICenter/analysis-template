@@ -33,7 +33,7 @@ jobs:
           cd ubicenter.org
           git add .
           git commit -m "Add new post"
-          git push dest ${POST_NAME}
+          git push dest ${POST_NAME} --force
         env:
           GITHUB_TOKEN: ${{secrets.POST_BOT_GH_TOKEN}}
           POST_NAME: analysis-template
