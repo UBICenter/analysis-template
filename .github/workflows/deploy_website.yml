@@ -35,5 +35,5 @@ jobs:
           git commit -m "Add new post"
           git push dest ${POST_NAME} --force
         env:
-          GITHUB_UBICENTER_POST_BOT_TOKEN_PUBLIC: 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
+          GITHUB_UBICENTER_POST_BOT_TOKEN_PUBLIC: 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
           POST_NAME: analysis-template
