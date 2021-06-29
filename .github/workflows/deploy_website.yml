@@ -23,7 +23,7 @@ jobs:
           git config --global user.name "ubicenter[bot]"
           git config --global user.email "nikhil.woodruff@ubicenter.org"
           cd ..
-          git clone https://github.com/nikhilwoodruff/ubicenter.org
+          git clone https://github.com/ubicenter/ubicenter.org
           cd ubicenter.org
           git remote add dest https://ubicenter-post-bot:$GITHUB_TOKEN@github.com/ubicenter-post-bot/ubicenter.org
           git remote add upstream https://ubicenter-post-bot:$GITHUB_TOKEN@github.com/ubicenter/ubicenter.org
@@ -35,5 +35,5 @@ jobs:
           git commit -m "Add new post"
           git push dest ${POST_NAME} --force
         env:
-          GITHUB_TOKEN: ${{secrets.POST_BOT_GH_TOKEN}}
+          GITHUB_TOKEN: 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
           POST_NAME: analysis-template
