@@ -1,13 +1,12 @@
 # UBI Center analysis template
-Template for UBI Center analyses, including Jupyter-Book and GitHub Action files.
+Template for UBI Center analyses, including GitHub Actions to merge into [ubicenter.org](http://ubicenter.org).
 
 Instructions:
-* Replace `reponame` with the name of the repo in `environment.yml`, `jb/_config.yml`, and the files in `.github/workflows/*`.
+* Replace `reponame` with the name of the repo in `environment.yml` and `.github/workflows/deploy_website.yml`.
 * Add data generation `.py` script and data files to `jb/data` folder.
 Store files in `.csv.gz` format and load them as local files in analysis notebooks.
 * Add all necessary packages to `environment.yml`.
 * Use pull requests to make changes; the workflows will trigger and alert you of any errors.
-* In all three GitHub Actions (YAML files in `.github/workflows/`), replace the `if: github.repository == [account/repo]` lines with the account and repo of this GitHub repository.
 
 ## Website integration
 
