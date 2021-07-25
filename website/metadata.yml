@@ -9,3 +9,4 @@ subclass: 'post'
 author: nikhil
 excerpt: "Some interesting excerpt."
 class: post-template
+useplotly: true
